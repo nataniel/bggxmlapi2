@@ -1,0 +1,20 @@
+{
+  "name": "nataniel/bggxmlapi2",
+  "description": "BoardGameGeek.com XML API2 - PHP Client Library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Artur Jedlinski",
+      "email": "artur@jedlinski.pl"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.0"
+  },
+  "autoload": {
+    "psr-0": {
+      "Nataniel\\BoardGameGeek": "src/"
+    }
+  },
+  "minimum-stability": "stable"
+}
