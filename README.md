@@ -3,7 +3,7 @@ BoardGameGeek.com XML API2 - PHP Client Library
 
 ## Installation
 ```
-composer require nataniel/bggxmlapi2:dev-master
+composer require nataniel/bggxmlapi2
 ```
 
 ## Usage
