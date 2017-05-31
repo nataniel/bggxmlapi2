@@ -1,6 +1,7 @@
 {
   "name": "nataniel/bggxmlapi2",
   "description": "BoardGameGeek.com XML API2 - PHP Client Library",
+  "type": "library",
   "license": "MIT",
   "authors": [
     {
