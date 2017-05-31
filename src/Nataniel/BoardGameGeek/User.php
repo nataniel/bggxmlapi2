@@ -18,7 +18,7 @@ class User
 
     public function getLogin()
     {
-        return $this->root['name'];
+        return (string)$this->root['name'];
     }
 
     public function getName()
@@ -28,21 +28,21 @@ class User
 
     public function getFirstName()
     {
-        return $this->root->firstname['value'];
+        return (string)$this->root->firstname['value'];
     }
 
     public function getLastName()
     {
-        return $this->root->lastname['value'];
+        return (string)$this->root->lastname['value'];
     }
 
     public function getAvatar()
     {
-        return $this->root->avatarlink['value'];
+        return (string)$this->root->avatarlink['value'];
     }
 
     public function getCountry()
     {
-        return $this->root->country['value'];
+        return (string)$this->root->country['value'];
     }
 }
