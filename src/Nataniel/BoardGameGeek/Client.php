@@ -18,7 +18,7 @@ class Client
      */
     public function getThing($id, $stats)
     {
-        $filename = sprintf('/thing?id=%d&stats=%d', $id, $stats);
+        $filename = sprintf('%s/thing?id=%d&stats=%d', self::API_URL, $id, $stats);
         $xml = simplexml_load_file($filename);
         if (!$xml instanceof \SimpleXMLElement) {
             throw new Exception('API call failed');
@@ -29,7 +29,7 @@ class Client
 
     public function getUser($name)
     {
-        $filename = sprintf('/user?name=%s', $name);
+        $filename = sprintf('%s/user?name=%s', self::API_URL, $name);
         $xml = simplexml_load_file($filename);
         if (!$xml instanceof \SimpleXMLElement) {
             throw new Exception('API call failed');
