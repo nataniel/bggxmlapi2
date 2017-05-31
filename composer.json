@@ -15,6 +15,5 @@
     "psr-0": {
       "Nataniel\\BoardGameGeek": "src/"
     }
-  },
-  "minimum-stability": "stable"
+  }
 }
