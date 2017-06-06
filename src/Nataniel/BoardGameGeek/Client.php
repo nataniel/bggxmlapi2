@@ -27,6 +27,11 @@ class Client
         return new Thing($xml);
     }
 
+    /**
+     * @param  string $name
+     * @return User
+     * @throws Exception
+     */
     public function getUser($name)
     {
         $filename = sprintf('%s/user?name=%s', self::API_URL, $name);
