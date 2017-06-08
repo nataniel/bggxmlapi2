@@ -3,6 +3,12 @@ namespace Nataniel\BoardGameGeek;
 
 class Thing
 {
+    const LANGUAGE_LEVEL_NO_NECESSARY_TEXT = 1, // No necessary in-game text
+        LANGUAGE_LEVEL_SOME_NECESSARY_TEXT = 2, // Some necessary text - easily memorized or small crib sheet
+        LANGUAGE_LEVEL_MODERATE_TEXT = 3,       // Moderate in-game text - needs crib sheet or paste ups
+        LANGUAGE_LEVEL_EXTENSIVE_USE = 4,       // Extensive use of text - massive conversion needed to be playable
+        LANGUAGE_LEVEL_UNPLAYABLE = 5;          // Unplayable in another language
+
     /** @var \SimpleXMLElement */
     private $root;
 
@@ -205,5 +211,38 @@ class Thing
         }
 
         return $names;
+    }
+
+    /**
+     * @return int
+     */
+    public function getLanguageDependenceLevel()
+    {
+        $level = null;
+        if ($xml = $this->root->xpath("poll[@name='language_dependence']/results/result")) {
+
+            $maxVotes = 0;
+            foreach ($xml as $element) {
+                if ((int)$element['numvotes'] > $maxVotes) {
+                    $level = (int)$element['level'];
+                }
+            }
+
+        }
+
+        return $level;
+    }
+
+    /**
+     * @return int
+     */
+    public function getBoardgameBasegame()
+    {
+        $xml = $this->root->xpath("link[@type='boardgameexpansion'][@inbound='true']");
+        while(list( , $node) = each($xml)) {
+            return (int)$node['id'];
+        }
+
+        return null;
     }
 }
