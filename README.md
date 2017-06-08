@@ -1,6 +1,5 @@
 # bggxmlapi2
-BoardGameGeek.com XML API2 - PHP Client Library:
-https://boardgamegeek.com/wiki/page/BGG_XML_API2
+PHP Client Library for BoardGameGeek.com [XML API2](https://boardgamegeek.com/wiki/page/BGG_XML_API2)
 
 ## Installation
 ```
