@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?><items termsofuse="http://boardgamegeek.com/xmlapi/termsofuse"><item type="boardgame" id="194880">
+         <thumbnail>//cf.geekdo-images.com/images/pic3176771_t.jpg</thumbnail>
+      <image>//cf.geekdo-images.com/images/pic3176771.jpg</image>
+                                     				
+				<name type="primary" sortindex="1" value="Dream Home" />
+			
+						                               				
+				<name type="alternate" sortindex="4" value="La Casa dei Sogni" />
+			    				
+				<name type="alternate" sortindex="1" value="Domek" />
+			    				
+				<name type="alternate" sortindex="1" value="Droomhuis" />
+			    				
+				<name type="alternate" sortindex="1" value="Dům snů" />
+			    				
+				<name type="alternate" sortindex="1" value="Hogar, Dulce Hogar" />
+			    				
+				<name type="alternate" sortindex="1" value="La Casa dei Sogni" />
+			    				
+				<name type="alternate" sortindex="1" value="Mein Traumhaus" />
+			    				
+				<name type="alternate" sortindex="1" value="Домик" />
+			
+						               													<description>What would your house look like? Would you rather have a huge bedroom with an elegant canopy bed or a spacious living room with a grand piano? You are going to play a part of designers who will plan a house and add more and more rooms to it.&amp;#10;&amp;#10;Dream Home is a family game about building and furnishing your new house. Over twelve rounds, players collect pairs of cards consisting of a room card and an accessory card (roof, helper, furnishing or tool) and place them on their personal boards, creating their dream homes.&amp;#10;&amp;#10;At the end of the game, all players&amp;rsquo; houses are finished and fully furnished. Players compare their houses, counting points for functionality, good design, quality of roof and furnishing. The player with the nicest and most comfortable house wins.&amp;#10;&amp;#10;</description>
+										      	               				<yearpublished value="2016" />
+						               				<minplayers value="2" />
+						               				<maxplayers value="4" />
+						      			<poll name="suggested_numplayers" title="User Suggested Number of Players" totalvotes="19">
+			
+		<results numplayers="1">		
+					<result value="Best" numvotes="0" />
+					<result value="Recommended" numvotes="1" />
+					<result value="Not Recommended" numvotes="5" />
+				</results>					
+			
+		<results numplayers="2">		
+					<result value="Best" numvotes="6" />
+					<result value="Recommended" numvotes="8" />
+					<result value="Not Recommended" numvotes="1" />
+				</results>					
+			
+		<results numplayers="3">		
+					<result value="Best" numvotes="9" />
+					<result value="Recommended" numvotes="8" />
+					<result value="Not Recommended" numvotes="0" />
+				</results>					
+			
+		<results numplayers="4">		
+					<result value="Best" numvotes="14" />
+					<result value="Recommended" numvotes="4" />
+					<result value="Not Recommended" numvotes="0" />
+				</results>					
+			
+		<results numplayers="4+">		
+					<result value="Best" numvotes="0" />
+					<result value="Recommended" numvotes="0" />
+					<result value="Not Recommended" numvotes="6" />
+				</results>					
+	</poll> 
+			               				<playingtime value="40" />
+						               				<minplaytime value="20" />
+						               				<maxplaytime value="40" />
+						               				<minage value="7" />
+						      			<poll name="suggested_playerage" title="User Suggested Player Age" totalvotes="14">
+			<results>		
+					<result value="2" numvotes="0" />
+					<result value="3" numvotes="0" />
+					<result value="4" numvotes="1" />
+					<result value="5" numvotes="1" />
+					<result value="6" numvotes="7" />
+					<result value="8" numvotes="5" />
+					<result value="10" numvotes="0" />
+					<result value="12" numvotes="0" />
+					<result value="14" numvotes="0" />
+					<result value="16" numvotes="0" />
+					<result value="18" numvotes="0" />
+					<result value="21 and up" numvotes="0" />
+				</results>					
+	</poll> 
+			      			<poll name="language_dependence" title="Language Dependence" totalvotes="5">
+			
+		<results>		
+					<result level="21" value="No necessary in-game text" numvotes="0" />
+					<result level="22" value="Some necessary text - easily memorized or small crib sheet" numvotes="5" />
+					<result level="23" value="Moderate in-game text - needs crib sheet or paste ups" numvotes="0" />
+					<result level="24" value="Extensive use of text - massive conversion needed to be playable" numvotes="0" />
+					<result level="25" value="Unplayable in another language" numvotes="0" />
+				</results>					
+	</poll> 
+			      			 
+			      				
+		 			
+
+			
+		
+					<link type="boardgamecategory" id="1002" value="Card Game" />
+		
+									
+			
+
+			      				
+		 			
+
+			
+		
+					<link type="boardgamemechanic" id="2041" value="Card Drafting" />
+		
+									
+				
+		 			
+
+			
+		
+					<link type="boardgamemechanic" id="2047" value="Memory" />
+		
+									
+				
+		 			
+
+			
+		
+					<link type="boardgamemechanic" id="2048" value="Pattern Building" />
+		
+									
+				
+		 			
+
+			
+		
+					<link type="boardgamemechanic" id="2004" value="Set Collection" />
+		
+									
+			
+
+			      			
+
+			      				
+		 			
+
+			
+		
+					<link type="boardgameexpansion" id="208871" value="Domek: Promo Token – Car" />
+		
+									
+				
+		 			
+
+			
+		
+					<link type="boardgameexpansion" id="215798" value="Dream Home: Promo Tokens – Christmas Tree" />
+		
+									
+			
+
+			      			
+
+			      			
+
+			      			
+
+			      			
+
+			      			
+
+			      			
+
+			      	      	      				
+		 			
+
+			
+		
+					<link type="boardgamedesigner" id="89488" value="Klemens Kalicki" />
+		
+									
+			
+
+			      				
+		 			
+
+			
+		
+					<link type="boardgameartist" id="53716" value="Bartłomiej Kordowski" />
+		
+									
+			
+
+			      	      				
+		 			
+
+			
+		
+					<link type="boardgamepublisher" id="23043" value="ADC Blackfire Entertainment" />
+		
+									
+				
+		 			
+
+			
+		
+					<link type="boardgamepublisher" id="157" value="Asmodee" />
+		
+									
+				
+		 			
+
+			
+		
+					<link type="boardgamepublisher" id="15889" value="Asterion Press" />
+		
+									
+				
+		 			
+
+			
+		
+					<link type="boardgamepublisher" id="34043" value="Chronicle Games (Board Game)" />
+		
+									
+				
+		 			
+
+			
+		
+					<link type="boardgamepublisher" id="18852" value="Hobby World" />
+		
+									
+				
+		 			
+
+			
+		
+					<link type="boardgamepublisher" id="39" value="Pegasus Spiele" />
+		
+									
+				
+		 			
+
+			
+		
+					<link type="boardgamepublisher" id="7466" value="REBEL.pl" />
+		
+									
+			
+
+			
+	
+
+	
+
+	
+	
+	
+   		<statistics page="1">
+								<ratings >
+			<usersrated value="1213" />
+			<average value="7.09359" />
+			<bayesaverage value="6.37035" />
+
+			<ranks>
+															<rank type="subtype" id="1" name="boardgame" friendlyname="Board Game Rank" value="1040" bayesaverage="6.37035" />
+																				<rank type="family" id="5499" name="familygames" friendlyname="Family Game Rank" value="218" bayesaverage="6.50957" />
+												</ranks>
+
+			<stddev value="1.1476" />
+			<median value="0" />
+			<owned value="1846" />
+			<trading value="22" />
+			<wanting value="236" />
+			<wishing value="984" />
+			<numcomments value="248" />
+			<numweights value="27" />
+			<averageweight value="1.8519" />
+			</ratings>
+								</statistics>
+     
+	
+          
+</item>
+</items>
