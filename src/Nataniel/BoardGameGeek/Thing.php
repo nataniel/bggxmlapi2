@@ -9,6 +9,9 @@ class Thing
         LANGUAGE_LEVEL_EXTENSIVE_USE = 4,       // Extensive use of text - massive conversion needed to be playable
         LANGUAGE_LEVEL_UNPLAYABLE = 5;          // Unplayable in another language
 
+    const TYPE_BOARDGAME = 'boardgame',
+        TYPE_BOARDGAMEEXPANSION = 'boardgameexpansion';
+
     /** @var \SimpleXMLElement */
     private $root;
 
@@ -23,6 +26,22 @@ class Thing
     public function getId()
     {
         return (int)$this->root['id'];
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return (string)$this->root['type'];
+    }
+
+    /**
+     * @return bool
+     */
+    public function isBoardgameExpansion()
+    {
+        return $this->getType() == self::TYPE_BOARDGAMEEXPANSION;
     }
 
     /**
