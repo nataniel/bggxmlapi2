@@ -14,7 +14,8 @@
   },
   "autoload": {
     "psr-0": {
-      "Nataniel\\BoardGameGeek": "src/"
+      "Nataniel\\BoardGameGeek": "src/",
+      "Nataniel\\BoardGameGeekTest": "tests/src/"
     }
   }
 }
