@@ -27,4 +27,14 @@ $user = $client->getUser('nataniel');
 
 var_dump($user->getAvatar());
 var_dump($user->getCountry());
+
+// search for a game
+$results = $client->search('Domek');
+echo count($results);
+
+$things = [];
+foreach ($result as $item) {
+    var_dump($item->getName());
+    $things[] = $client->getThing($item->getId());
+}
 ```
