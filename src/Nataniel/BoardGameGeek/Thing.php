@@ -17,7 +17,7 @@ class Thing
 
     public function __construct(\SimpleXMLElement $xml)
     {
-        $this->root = $xml->item;
+        $this->root = $xml;
     }
 
     /**

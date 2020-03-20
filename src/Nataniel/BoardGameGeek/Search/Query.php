@@ -1,6 +1,8 @@
 <?php
 namespace Nataniel\BoardGameGeek\Search;
 
+use Nataniel\BoardGameGeek\Exception;
+
 class Query implements \IteratorAggregate, \Countable, \ArrayAccess
 {
     /** @var \SimpleXMLElement */
@@ -31,12 +33,13 @@ class Query implements \IteratorAggregate, \Countable, \ArrayAccess
      */
     public function count()
     {
-        return count($this->results);
+        return (int)$this->root['total'];
     }
 
     /**
-     * @param int $offset
-     * @param mixed $value
+     * @param  int $offset
+     * @param  mixed $value
+     * @throws Exception
      */
     public function offsetSet($offset, $value)
     {
@@ -54,6 +57,7 @@ class Query implements \IteratorAggregate, \Countable, \ArrayAccess
 
     /**
      * @param int $offset
+     * @throws Exception
      */
     public function offsetUnset($offset)
     {
