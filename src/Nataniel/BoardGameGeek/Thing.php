@@ -69,6 +69,14 @@ class Thing
     }
 
     /**
+     * @return string
+     */
+    public function getThumbnail()
+    {
+        return (string)$this->root->thumbnail;
+    }
+
+    /**
      * @return int
      */
     public function getYearPublished()
