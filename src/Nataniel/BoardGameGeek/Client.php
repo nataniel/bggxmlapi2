@@ -33,6 +33,29 @@ class Client
     }
 
     /**
+     * @param  array $ids
+     * @param  bool $stats
+     * @return Thing
+     * @throws Exception
+     */
+    public function getThings($ids, $stats)
+    {
+        $ids = implode(',', $ids);
+        $filename = sprintf('%s/thing?id=%s&stats=%d', self::API_URL, $ids, $stats);
+        $xml = simplexml_load_file($filename);
+        if (!$xml instanceof \SimpleXMLElement) {
+            throw new Exception('API call failed');
+        }
+
+        $things = [];
+        foreach($xml->item as $item) {
+            $things[] = new Thing(new \SimpleXmlElement('<item>'.$item->asXml().'</item>'));
+        }
+    
+        return $things;
+    }
+
+    /**
      * @param  string $name
      * @return User
      * @throws Exception
