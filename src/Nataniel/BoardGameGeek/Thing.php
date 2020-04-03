@@ -225,6 +225,14 @@ class Thing
     {
         return round((float)$this->root->statistics->ratings->average['value'], 1);
     }
+    
+    /**
+     * @return float
+     */
+    public function getWeightAverage()
+    {
+        return round((float)$this->root->statistics->ratings->averageweight['value'], 1);
+    }
 
     /**
      * @return string[]
