@@ -76,7 +76,7 @@ class ClientTest extends TestCase
     public function testGetCollection()
     {
         $client = new BoardGameGeek\Client();
-        $items = $client->getCollection([ 'username' => 'nataniel ']);
+        $items = $client->getCollection([ 'username' => 'nataniel']);
 
         $this->assertNotEmpty($items);
         foreach ($items as $i => $item) {
