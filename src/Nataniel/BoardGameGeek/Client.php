@@ -132,4 +132,25 @@ class Client
 
         return new Search\Query($xml);
     }
+
+    /**
+     * @param  array $params
+     * @return Play[]
+     * @throws Exception
+     */
+    public function getPlays($params)
+    {
+        $filename = sprintf('%s/plays?%s', self::API_URL, http_build_query($params));
+        $xml = simplexml_load_file($filename);
+        if (!$xml instanceof \SimpleXMLElement) {
+            throw new Exception('API call failed');
+        }
+
+        $items = [];
+        foreach ($xml as $item) {
+            $items[] = new Play($item);
+        }
+
+        return $items;
+    }
 }
