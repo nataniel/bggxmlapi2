@@ -76,13 +76,38 @@ class ClientTest extends TestCase
     public function testGetCollection()
     {
         $client = new BoardGameGeek\Client();
-        $items = $client->getCollection([ 'username' => 'nataniel']);
+        $items = $client->getCollection(['username' => 'nataniel']);
 
         $this->assertNotEmpty($items);
         foreach ($items as $i => $item) {
             $this->assertInstanceOf(BoardGameGeek\CollectionItem::class, $item);
             $this->assertNotEmpty($item->getName());
             $this->assertStringStartsWith('https://cf.geekdo-images.com', $item->getImage());
+        }
+    }
+
+    /**
+     * https://www.boardgamegeek.com/xmlapi2/plays?username=nataniel
+     * @covers BoardGameGeek\Client::getPlays
+     */
+    public function testGetPlays()
+    {
+        $client = new BoardGameGeek\Client();
+        $plays = $client->getPlays([
+            'username' => 'nataniel',
+            'mindate' => '2005-02-07',
+            'maxdate' => '2005-02-07',
+        ]);
+
+        $this->assertNotEmpty($plays);
+
+        foreach ($plays as $play) {
+            $this->assertInstanceOf(BoardGameGeek\Play::class, $play);
+            $this->assertEquals('2005-02-07', $play->getDate());
+            $this->assertEquals(1, $play->getQuantity());
+            $this->assertEquals('thing', $play->getObjectType());
+            $this->assertEquals(3307, $play->getObjectId());
+            $this->assertEquals('Wallenstein', $play->getObjectName());
         }
     }
 }
