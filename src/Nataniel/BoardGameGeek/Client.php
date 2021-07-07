@@ -19,10 +19,7 @@ class Client
     public function getThing($id, $stats = false)
     {
         $filename = sprintf('%s/thing?id=%d&stats=%d', self::API_URL, $id, $stats);
-        $xml = simplexml_load_file($filename);
-        if (!$xml instanceof \SimpleXMLElement) {
-            throw new Exception('API call failed');
-        }
+        $xml = $this->request($filename);
 
         return new Thing($xml->item);
     }
@@ -36,10 +33,7 @@ class Client
     public function getThings($ids, $stats = false)
     {
         $filename = sprintf('%s/thing?id=%s&stats=%d', self::API_URL, join(',', $ids), $stats);
-        $xml = simplexml_load_file($filename);
-        if (!$xml instanceof \SimpleXMLElement) {
-            throw new Exception('API call failed');
-        }
+        $xml = $this->request($filename);
 
         $items = [];
         foreach ($xml as $item) {
@@ -60,10 +54,7 @@ class Client
     public function getCollection($params)
     {
         $filename = sprintf('%s/collection?%s', self::API_URL, http_build_query($params));
-        $xml = simplexml_load_file($filename);
-        if (!$xml instanceof \SimpleXMLElement) {
-            throw new Exception('API call failed');
-        }
+        $xml = $this->request($filename);
 
         $items = [];
         foreach ($xml as $item) {
@@ -81,10 +72,7 @@ class Client
     public function getHotItems($type = Type::BOARDGAME)
     {
         $filename = sprintf('%s/hot?type=%s', self::API_URL, $type);
-        $xml = simplexml_load_file($filename);
-        if (!$xml instanceof \SimpleXMLElement) {
-            throw new Exception('API call failed');
-        }
+        $xml = $this->request($filename);
 
         $items = [];
         foreach ($xml as $item) {
@@ -102,10 +90,7 @@ class Client
     public function getUser($name)
     {
         $filename = sprintf('%s/user?name=%s', self::API_URL, $name);
-        $xml = simplexml_load_file($filename);
-        if (!$xml instanceof \SimpleXMLElement) {
-            throw new Exception('API call failed');
-        }
+        $xml = $this->request($filename);
 
         return new User($xml);
     }
@@ -125,10 +110,7 @@ class Client
             'exact' => (int)$exact,
         ])));
 
-        $xml = simplexml_load_file($filename);
-        if (!$xml instanceof \SimpleXMLElement) {
-            throw new Exception('API call failed');
-        }
+        $xml = $this->request($filename);
 
         return new Search\Query($xml);
     }
@@ -141,10 +123,7 @@ class Client
     public function getPlays($params)
     {
         $filename = sprintf('%s/plays?%s', self::API_URL, http_build_query($params));
-        $xml = simplexml_load_file($filename);
-        if (!$xml instanceof \SimpleXMLElement) {
-            throw new Exception('API call failed');
-        }
+        $xml = $this->request($filename);
 
         $items = [];
         foreach ($xml as $item) {
@@ -152,5 +131,20 @@ class Client
         }
 
         return $items;
+    }
+
+    /**
+     * @param $url
+     * @return \SimpleXMLElement
+     * @throws Exception
+     */
+    protected function request($url)
+    {
+        $xml = simplexml_load_file($url);
+        if (!$xml instanceof \SimpleXMLElement) {
+            throw new Exception('API call failed');
+        }
+
+        return $xml;
     }
 }
