@@ -12,5 +12,8 @@ class SearchTest extends TestCase
         $search = new BoardGameGeek\Search\Query($xml);
         $this->assertCount(82, $search);
         $this->assertInstanceOf(\Traversable::class, $search);
+        foreach ($search as $result) {
+            $this->assertInstanceOf(BoardGameGeek\Search\Result::class, $result);
+        }
     }
 }

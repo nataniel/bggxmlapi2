@@ -11,42 +11,27 @@ class HotItem
         $this->root = $xml;
     }
 
-    /**
-     * @return int
-     */
-    public function getId()
+    public function getId(): int
     {
         return (int)$this->root['id'];
     }
 
-    /**
-     * @return string
-     */
-    public function getRank()
+    public function getRank(): int
     {
         return (int)$this->root['rank'];
     }
 
-    /**
-     * @return string
-     */
-    public function getName()
+    public function getName(): string
     {
         return (string)$this->root->name['value'];
     }
 
-    /**
-     * @return int
-     */
-    public function getYearPublished()
+    public function getYearPublished(): int
     {
         return (int)$this->root->yearpublished['value'];
     }
 
-    /**
-     * @return string
-     */
-    public function getThumbnail()
+    public function getThumbnail(): string
     {
         return (string)$this->root->thumbnail['value'];
     }

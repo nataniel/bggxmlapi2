@@ -14,34 +14,27 @@ class Result
         $this->root = $xml;
     }
 
-    /**
-     * @return int
-     */
-    public function getId()
+    public function getId(): int
     {
         return (int)$this->root['id'];
     }
 
-    /**
-     * @return string
-     */
-    public function getType()
+    public function getType(): string
     {
         return (string)$this->root['type'];
     }
 
-    /**
-     * @return string
-     */
-    public function getName()
+    public function isType(string $type): bool
+    {
+        return $this->getType() === $type;
+    }
+
+    public function getName(): string
     {
         return (string)$this->root->name['value'];
     }
 
-    /**
-     * @return int
-     */
-    public function getYearPublished()
+    public function getYearPublished(): int
     {
         return (int)$this->root->yearpublished['value'];
     }
