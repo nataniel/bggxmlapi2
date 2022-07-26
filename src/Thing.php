@@ -213,6 +213,16 @@ class Thing
     {
         return round((float)$this->root->statistics->ratings->averageweight['value'], 1);
     }
+    
+    
+    /**
+     * @return int
+     */
+    public function getRank()
+    {
+        return (float)$this->root->statistics->ratings->ranks->rank['value'];
+    }
+    
 
     public function getAlternateNames(): array
     {
